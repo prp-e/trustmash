@@ -28,7 +28,7 @@ end
 
 get '/:id' do 
     content_type :json 
-    text = db.execute("SELECT trusty_case FROM trusts WHERE id=#{params[:id]}")
+    text = db.execute("SELECT trusty_case FROM trusts WHERE id=#{params[:id]}")[0][0]
     {:id => params[:id], :text => text}.to_json
 end
 
