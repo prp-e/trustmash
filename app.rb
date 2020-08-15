@@ -3,7 +3,7 @@ require 'sinatra'
 require 'json'
 
 def elo_rating(rating_a, rating_b)
-    probablity = 1/(1 + 10**((rating_a - rating_b)/400)
+    probablity = 1/(1 + 10**((rating_b - rating_a)/400))
     return probablity
 end
 
@@ -46,8 +46,8 @@ get '/trust_rate/:id_1/:id_2' do
     rating_b = db.execute("SELECT rating FROM trusts WHERE id=#{params[:id_2]}")
     text_a = db.execute("SELECT trusty_case FROM trusts WHERE id=#{params[:id_1]}")
     text_b = db.execute("SELECT trusty_case FROM trusts WHERE id=#{params[:id_2]}")
-    rating_a = rating_a.to_f 
-    rating_b = rating_b.to_f
+    rating_a = rating_a[0][0].to_f 
+    rating_b = rating_b[0][0].to_f
     rate_a = elo_rating(rating_a, rating_b)
     rate_b = elo_rating(rating_b, rating_a)
 
