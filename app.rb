@@ -46,6 +46,13 @@ get '/trust_rate/:id_1/:id_2' do
     rating_b = db.execute("SELECT rating FROM trusts WHERE id=#{params[:id_2]}")
     text_a = db.execute("SELECT trusty_case FROM trusts WHERE id=#{params[:id_1]}")
     text_b = db.execute("SELECT trusty_case FROM trusts WHERE id=#{params[:id_2]}")
+    rating_a = rating_a.to_f 
+    rating_b = rating_b.to_f
     rate_a = elo_rating(rating_a, rating_b)
     rate_b = elo_rating(rating_b, rating_a)
+
+    {
+        "competitor_1" => {"rating" => rating_a, "text" => text_a, "probablity" => rate_a},
+        "competitor_2" => {"rating" => rating_b, "text" => text_b, "probablity" => rate_b}
+}.to_json
 end 
