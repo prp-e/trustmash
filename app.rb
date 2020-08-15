@@ -46,4 +46,6 @@ get '/trust_rate/:id_1/:id_2' do
     rating_b = db.execute("SELECT rating FROM trusts WHERE id=#{params[:id_2]}")
     text_a = db.execute("SELECT trusty_case FROM trusts WHERE id=#{params[:id_1]}")
     text_b = db.execute("SELECT trusty_case FROM trusts WHERE id=#{params[:id_2]}")
+    rate_a = elo_rating(rating_a, rating_b)
+    rate_b = elo_rating(rating_b, rating_a)
 end 
