@@ -36,5 +36,8 @@ get '/rate/:competitor_1/:competitor_2' do
 end 
 
 get '/trust_rate/:id_1/:id_2'
-    'to be implemented'
+    rating_a = db.execute("SELECT rating FROM trusts WHERE id=#{params[:id_1]}")
+    rating_b = db.execute("SELECT rating FROM trusts WHERE id=#{params[:id_2]}")
+    text_a = db.execute("SELECT trusty_case FROM trusts WHERE id=#{params[:id_1]}")
+    text_b = db.execute("SELECT trusty_case FROM trusts WHERE id=#{params[:id_2]}")
 end 
