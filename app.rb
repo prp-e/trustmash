@@ -26,3 +26,11 @@ get '/:id' do
     text = db.execute("SELECT trusty_case FROM trusts WHERE id=#{params[:id]}")
     {:id => params[:id], :text => text}.to_json
 end
+
+get '/rate/:competitor_1/:competitor_2' do 
+    content_type :json 
+    db.execute("UPDATE trusts SET rating = rating + 1 WHERE id=#{params[:competitor_1]}")
+    db.execute("UPDATE trusts SET rating = rating -1 WHERE id=#{params[:competitor_2]}")
+
+    {"status" => "ok"}.to_json 
+end 
