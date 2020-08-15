@@ -2,6 +2,11 @@ require 'sqlite3'
 require 'sinatra'
 require 'json'
 
+def elo_rating(rating_a, rating_b)
+    probablity = 1/(1 + 10**((rating_a - rating_b)/400)
+    return probablity
+end
+
 input_strings = File.open("clean_text.txt", 'r')
 phrases = []
 
