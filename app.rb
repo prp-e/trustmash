@@ -34,3 +34,7 @@ get '/rate/:competitor_1/:competitor_2' do
 
     {"status" => "ok"}.to_json 
 end 
+
+get '/trust_rate/:id_1/:id_2'
+    'to be implemented'
+end 
