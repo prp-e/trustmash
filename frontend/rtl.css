@@ -1,5 +1,6 @@
 body {
     direction:rtl ; 
+    float: center;
 }
 
 p {
@@ -8,4 +9,10 @@ p {
 
 header {
     direction: inherit;
+}
+
+h1 {
+    direction: inherit;
+    color: white;
+    text-align: center;
 }
