@@ -4,6 +4,7 @@
 }
 
 body {
+    width: auto;
     direction:rtl ; 
     float: center;
     font-family: Vazir;
@@ -11,20 +12,24 @@ body {
 
 p {
     direction: inherit;
-    font-family: inherit;
+    font-family: Vazir;
 }
 
 header {
     direction: inherit;
     margin-bottom: 35px;
-    font-family: inherit;
+    font-family: Vazir;
 }
 
 h1 {
-    font-family: inherit;
+    font-family: Vazir;
     direction: inherit;
     color: white;
     text-align: center;
+}
+
+h2 {
+    font-family: Vazir;
 }
 
 .description {
@@ -32,4 +37,10 @@ h1 {
     text-align: center;
     font-size: 16px;
     padding-bottom: 15px;
+}
+
+.slogan {
+    text-align:right;
+    float: right;
+    direction:rtl; 
 }
