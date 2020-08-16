@@ -21,6 +21,10 @@ header {
     font-family: Vazir;
 }
 
+footer {
+    margin-top: 200px;
+}
+
 h1 {
     font-family: Vazir;
     direction: inherit;
