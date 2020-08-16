@@ -4,6 +4,7 @@
 }
 
 body {
+    padding-top: 70px;
     width: auto;
     direction:rtl ; 
     float: center;
