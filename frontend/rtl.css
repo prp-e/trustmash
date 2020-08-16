@@ -1,18 +1,27 @@
+@font-face {
+    font-family: Vazir;
+    src: url('./Vazir.ttf');
+}
+
 body {
     direction:rtl ; 
     float: center;
+    font-family: Vazir;
 }
 
 p {
     direction: inherit;
+    font-family: inherit;
 }
 
 header {
     direction: inherit;
     margin-bottom: 35px;
+    font-family: inherit;
 }
 
 h1 {
+    font-family: inherit;
     direction: inherit;
     color: white;
     text-align: center;
