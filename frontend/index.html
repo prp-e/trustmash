@@ -7,11 +7,31 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     </head>
     <body>
-        <a onclick="callAjax('competition_1')" id="competition_1"><p id="competitor_1"></p></a>
+        <a onclick="callAjax('competition_1')" id="competition_1" class="btn btn-primary"><p id="competitor_1"></p></a>
         <a onclick="callAjax('competition_2')" id="competition_2"><p id="competitor_2"></p></a>
         <script type="text/javascript" src="./competition.js"></script>
         <script>
+            function callAjax(competition_1) {
+	        $.ajax({
+		        url: competition_link_1,
+		        method: "GET",
+		        contentType: "application/JSON",
+		        success: (result) => {
+			        console.log(result);
+		        }
+	        });
+        }
 
+        function callAjax(competition_2) {
+	        $.ajax({
+		        url: competition_link_2,
+		        method: "GET",
+		        contentType: "application/JSON",
+		        success: (result) => {
+			        console.log(result);
+		    }
+	    });
+    }   
         </script>
     </body>
 </html>
