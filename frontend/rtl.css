@@ -1,0 +1,11 @@
+body {
+    direction:rtl ; 
+}
+
+p {
+    direction: inherit;
+}
+
+header {
+    direction: inherit;
+}
