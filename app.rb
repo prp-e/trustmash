@@ -53,7 +53,7 @@ get '/rate/:competitor_1/:competitor_2' do
     db.execute("UPDATE trusts SET rating = rating + 1 WHERE id=#{params[:competitor_1]}")
     db.execute("UPDATE trusts SET rating = rating -1 WHERE id=#{params[:competitor_2]}")
 
-    {:status => "ok"}.to_json
+    redirect 'http://localhost:8000'
 end 
 
 get '/trust_rate/:id_1/:id_2' do 
