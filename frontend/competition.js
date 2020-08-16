@@ -19,29 +19,3 @@ request_2 = fetch(link_competitor_2).then(res => {return res.json()}).then(data 
 
 competition_1 = document.getElementById("competition_1").setAttribute("href", competition_link_1);
 competition_2 = document.getElementById("competition_2").setAttribute("href", competition_link_2);
-
-function callAjax(competition_2) {
-    $.ajax({
-        url: competition_link_2,
-        method: "GET",
-        contentType: "application/JSON",
-        success: function(s) {
-            if(s.status){
-                location.reload();
-            }
-        }
-});
-}
-
-function callAjax(competition_1) {
-    $.ajax({
-        url: competition_link_1,
-        method: "GET",
-        contentType: "application/JSON",
-        success: function(s) {
-            if(s.status){
-                location.reload();
-            }
-        }
-});
-}
