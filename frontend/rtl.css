@@ -22,6 +22,7 @@ header {
 }
 
 footer {
+    direction: ltr;
     margin-top: 200px;
 }
 
