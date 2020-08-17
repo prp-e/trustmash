@@ -5,8 +5,8 @@ function appendData(data, id) {
 	mainContainer.innerHTML = data; 
 }
 
-competitor_1 = Math.floor(1 + (Math.random() * 498 ));
-competitor_2 = Math.floor(1 + (Math.random() * 498 ));
+competitor_1 = Math.floor(1 + (Math.random() * 497 ));
+competitor_2 = Math.floor(1 + (Math.random() * 497 ));
 
 link_competitor_1 = "http://localhost:4567/" + String(competitor_1);
 link_competitor_2 = "http://localhost:4567/" + String(competitor_2);
